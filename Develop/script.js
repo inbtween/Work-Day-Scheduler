@@ -1,8 +1,7 @@
 // time blocks
 var timeBlocks = [
-    {
-        hour = 9,
-        events = "",
+    { time = 9,
+    events = "",
     }
 ]
 
