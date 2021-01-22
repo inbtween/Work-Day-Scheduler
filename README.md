@@ -1,6 +1,7 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
 https://inbtween.github.io/Work-Day-Scheduler/
+https://github.com/inbtween/Work-Day-Scheduler.git
 
 ## My Task
 
