@@ -31,76 +31,51 @@
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row time-block">
-      <div class="hour col-md-1">
-        9:00AM
-      </div>
-      <textarea class="description col-md-10"> Dr Appt</textarea>
+      <div class="hour col-md-1"></div>
+      <textarea class="description col-md-10"></textarea>
       <button class="btn saveBtn col-md-1" input type="image" ></button>
       </div>
       <div class="row time-block">
-        <div class="hour col-md-1">
-          10:00AM
-        </div>
-        <textarea class="description col-md-10"> Dr Appt</textarea>
+        <div class="hour col-md-1"></div>
+        <textarea class="description col-md-10"></textarea>
         <button class="btn saveBtn col-md-1" input type="image" ></button>
         </div>
       <div class="row time-block">
-          <div class="hour col-md-1">
-            11:00AM
-          </div>
-          <textarea class="description col-md-10"> Dr Appt</textarea>
+          <div class="hour col-md-1"></div>
+          <textarea class="description col-md-10"></textarea>
           <button class="btn saveBtn col-md-1" input type="image" ></button>
           </div>
       <div class="row time-block">
-      <div class="hour col-md-1">
-      12:00PM  
-      </div>
-      <textarea class="description col-md-10"> Dr Appt</textarea>
+      <div class="hour col-md-1"></div>
+      <textarea class="description col-md-10"></textarea>
       <button class="btn saveBtn col-md-1" input type="image" ></button>
       </div>  
       <div class="row time-block">
-        <div class="hour col-md-1">
-          1:00PM
-        </div>
-        <textarea class="description col-md-10"> Dr Appt</textarea>
+        <div class="hour col-md-1"></div>
+        <textarea class="description col-md-10"></textarea>
         <button class="btn saveBtn col-md-1" input type="image" ></button>
         </div>
       <div class="row time-block">
-          <div class="hour col-md-1">
-            2:00PM
-          </div>
-          <textarea class="description col-md-10"> Dr Appt</textarea>
+          <div class="hour col-md-1"></div>
+          <textarea class="description col-md-10"></textarea>
           <button class="btn saveBtn col-md-1" input type="image" ></button>
           </div>
       <div class="row time-block">
-            <div class="hour col-md-1">
-              3:00PM
-            </div>
-            <textarea class="description col-md-10"> Dr Appt</textarea>
+            <div class="hour col-md-1"></div>
+            <textarea class="description col-md-10"></textarea>
             <button class="btn saveBtn col-md-1" input type="image" ></button>
             </div>
       <div class="row time-block">
-        <div class="hour col-md-1">
-          4:00PM
-        </div>
-        <textarea class="description col-md-10"> Dr Appt</textarea>
+        <div class="hour col-md-1"></div>
+        <textarea class="description col-md-10"></textarea>
         <button class="btn saveBtn col-md-1" input type="image" ></button>
         </div>
       <div class="row time-block">
-          <div class="hour col-md-1">
-            5:00PM
-          </div>
-          <textarea class="description col-md-10"> Dr Appt</textarea>
+          <div class="hour col-md-1"></div>
+          <textarea class="description col-md-10"></textarea>
           <button class="btn saveBtn col-md-1" input type="image" ></button>
       </div>
     
-
-
-
-
-
-
-
     <script type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -108,6 +83,16 @@
     <script>
       console.log(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
       $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+      var timeBlocks = [
+    { time = 9,
+    events = "",
+    }
+];
+// timeblock limited to time displayed
+// timeblock changes based on current time
+// past color
+// current time
+// future
     </script>
   </body>
 </html>
