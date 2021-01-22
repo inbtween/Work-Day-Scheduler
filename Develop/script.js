@@ -27,7 +27,7 @@ var timeBlocks = [
     { hour = "5 PM",
     event = " ",
     },
-]
+];
 
 
 // go through the time bloacks, for loop or for each.
