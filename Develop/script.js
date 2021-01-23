@@ -2,6 +2,7 @@
 // // $(document).ready(function () {}
 // // STARTING DATA------------------
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
 // // time blocks for standard business hours, 9AM - 5PM
 // //  a daily planner to create a schedule
 var schedule = ["", "", "", "", "", "", "", "", ""];
@@ -10,6 +11,7 @@ var timeWindow = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 // /// THEN each time block is color-coded to indicate whether it is in the past, present, or future
 var timeFuture = "future";
 var timePast = "past";
+var timeCurrent = "now";
 var timeBlock = $(".container");
 // // FUNCTIONS-----------------
 console.log(moment().format("h"));
@@ -19,16 +21,18 @@ if ((moment().format("h") = timeWindow[0])) {
 } else if(timeFuture = (moment().format("h") + 1)
 ) else {
   timePast = (moment().format("h") - 1 
-};
+}
+ 
+
 
 // function init() {
 //   // THEN the text for that event is saved in local storage
 //   if (localStorage.getItem("textAreaValue"))
 //     descriptions = JSON.parse(localStorage.getItem("textAreaValue"));
 // }
-// // // THEN the saved events persist
-// setInterval(function () {
-//   $("currentDay")
+// // THEN the saved events persist
+setInterval(function () {
+  $("currentDay")
 // }
 // for (var i = 0; i < 9; i++) {
 //   var divTag = $('<div class= "row time-block">');
@@ -43,7 +47,7 @@ if ((moment().format("h") = timeWindow[0])) {
 $("saveBtn").on("click", function () {
   var schedule = $(".description").val();
   console.log(schedule);
-  localStorage.setItem("", JSON.stringify(timeBlocks));
+  localStorage.setItem("Save", JSON.stringify(timeBlock));
   var getEvent = JSON.parse(localStorage);
 });
 

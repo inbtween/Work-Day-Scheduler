@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Develop/style.css" />
+
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,76 +29,62 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-
     <div class="container">
-      <div class="row" id="9">
-        <span class="hour col-md-1">9AM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-9"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-9">SAVE</span>
+      <!-- Timeblocks go here -->
+      <div class="row time-block" id="9">
+        <div class="hour col-md-1">9AM</div>
+        <textarea class="description col-md-10" id="text-9"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-9">SAVE</button>
       </div>
-      <div class="row" id="10">
-        <span class="hour col-md-1">10AM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-10"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-10">SAVE</span>
+      <div class="row time-block" id="10">
+        <div class="hour col-md-1">10AM</div>
+        <textarea class="description col-md-10" id="text-10"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-10">SAVE</button>
       </div>
-      <div class="row" id="11">
-        <span class="hour col-md-1">11AM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-11"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-11">SAVE</span>
+      <div class="row time-block" id="11">
+        <div class="hour col-md-1">11AM</div>
+        <textarea class="description col-md-10" id="text-11"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-11">SAVE</button>
       </div>
-      <div class="row" id="12">
-        <span class="hour col-md-1">12PM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-12"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-12">SAVE</span>
+      <div class="row time-block" id="12">
+        <div class="hour col-md-1">12AM</div>
+        <textarea class="description col-md-10" id="text-12"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-12">SAVE</button>
       </div>
-      <div class="row" id="13">
-        <span class="hour col-md-1">1pm</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-13"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-13">SAVE</span>
+      <div class="row time-block" id="13">
+        <div class="hour col-md-1">1PM</div>
+        <textarea class="description col-md-10" id="text-13"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-13">SAVE</button>
       </div>
-      <div class="row" id="14">
-        <span class="hour col-md-1">2PM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-14"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-14">SAVE</span>
+      <div class="row time-block" id="14">
+        <div class="hour col-md-1">2PM</div>
+        <textarea class="description col-md-10" id="text-14"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-14">SAVE</button>
       </div>
-      <div class="row" id="15">
-        <span class="hour col-md-1">3PM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-15"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-15">SAVE</span>
+      <div class="row time-block" id="15">
+        <div class="hour col-md-1">3PM</div>
+        <textarea class="description col-md-10" id="text-15"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-15">SAVE</button>
       </div>
-      <div class="row" id="16">
-        <span class="hour col-md-1">4PM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-16"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-16">SAVE</span>
+      <div class="row time-block" id="16">
+        <div class="hour col-md-1">4PM</div>
+        <textarea class="description col-md-10" id="text-16"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-16">SAVE</button>
       </div>
-      <div class="row" id="17">
-        <span class="hour col-md-1">5PM</span>
-        <span class="input-box">
-          <textarea class="description col-md-10" id="text-17"></textarea>
-        </span>
-        <span class="col-md-1 btn saveBtn" id="btn-17">SAVE</span>
+      <div class="row time-block" id="17">
+        <div class="hour col-md-1">5PM</div>
+        <textarea class="description col-md-10" id="text-17"></textarea>
+        <button class="btn saveBtn col-md-1" id="btn-17">SAVE</button>
       </div>
     </div>
-
     <script type="text/javascript"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Develop/script.js"></script>
+    <script>
+      console.log(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+      $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+    </script>
   </body>
 </html>
