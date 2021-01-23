@@ -2,6 +2,7 @@
 
 https://inbtween.github.io/Work-Day-Scheduler/
 https://github.com/inbtween/Work-Day-Scheduler.git
+<a href="/Assets/screen-shot-work-day-scheduler.png"></a>
 
 ## My Task
 
