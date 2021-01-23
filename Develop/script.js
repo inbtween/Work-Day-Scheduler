@@ -1,9 +1,12 @@
-// STARTING DATA
+// STARTING DATA------------------
 // time blocks for standard business hours, 9AM - 5PM
 //  a daily planner to create a schedule
-
 var schedule = ["", "", "", "", "", "", "", "", ""];
-// time blocks
+// time blocks for that day
+var timeWindow = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+/// THEN each time block is color-coded to indicate whether it is in the past, present, or future
+var timeFuture = "future";
+// FUNCTIONS-----------------
 
 // save button will store appt in local storage
 // add event listener
@@ -13,12 +16,9 @@ $("button").on("click"),
     var getEvent = JSON.parse(localStorage);
   };
 
-// WHEN I view the time blocks for that day
-// THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
+// USER INTERACTIONS--------------
 // WHEN I click into a time block
 // THEN I can enter an event
-
 // WHEN I click the save button for that time block
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
