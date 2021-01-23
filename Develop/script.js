@@ -9,8 +9,18 @@ var schedule = ["", "", "", "", "", "", "", "", ""];
 var timeWindow = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 // /// THEN each time block is color-coded to indicate whether it is in the past, present, or future
 var timeFuture = "future";
+var timePast = "past";
 var timeBlock = $(".container");
 // // FUNCTIONS-----------------
+console.log(moment().format("h"));
+// if time the current time = now, then set to present, else, future, all else past
+
+if ((moment().format("h") = timeWindow[0])) {
+} else if(timeFuture = (moment().format("h") + 1)
+) else {
+  timePast = (moment().format("h") - 1 
+};
+
 // function init() {
 //   // THEN the text for that event is saved in local storage
 //   if (localStorage.getItem("textAreaValue"))
@@ -29,13 +39,13 @@ var timeBlock = $(".container");
 // }
 
 // // save button will store appt in local storage
-// // add event listener
-// $("button").on("click", function () {
-//   var schedule = $(".description").val();
-//   console.log(schedule);
-//   localStorage.setItem("", JSON.stringify(timeBlocks));
-//   var getEvent = JSON.parse(localStorage);
-// });
+// add event listener
+$("saveBtn").on("click", function () {
+  var schedule = $(".description").val();
+  console.log(schedule);
+  localStorage.setItem("", JSON.stringify(timeBlocks));
+  var getEvent = JSON.parse(localStorage);
+});
 
 // for (var i = 0; i < 9; i++) {
 //   var divTag = $("class= "row time-block"")
