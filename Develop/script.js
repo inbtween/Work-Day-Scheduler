@@ -1,15 +1,10 @@
+// STARTING DATA
+// time blocks for standard business hours, 9AM - 5PM
+//  a daily planner to create a schedule
+
+var schedule = ["", "", "", "", "", "", "", "", ""];
 // time blocks
-var timeBlocks = [
-  { hour: "9AM", appt: inputAppt.value.trim() },
-  { hour: "10AM", appt: " " },
-  { hour: "11 AM", appt: " " },
-  { hour: "12PM", appt: " " },
-  { hour: "1PM", appt: " " },
-  { hour: "2PM", appt: " " },
-  { hour: "3PM", appt: " " },
-  { hour: "4PM", appt: " " },
-  { hour: "5PM", appt: " " },
-];
+
 // save button will store appt in local storage
 // add event listener
 $("button").on("click"),
@@ -17,6 +12,17 @@ $("button").on("click"),
     localStorage.setItem("timeBlocks", JSON.stringify(timeBlocks));
     var getEvent = JSON.parse(localStorage);
   };
+
+// WHEN I view the time blocks for that day
+// THEN each time block is color-coded to indicate whether it is in the past, present, or future
+
+// WHEN I click into a time block
+// THEN I can enter an event
+
+// WHEN I click the save button for that time block
+// THEN the text for that event is saved in local storage
+// WHEN I refresh the page
+// THEN the saved events persist
 //   };
 //   function $(".time-block").each(function() {
 //         var getid = $(this).attr("id");
