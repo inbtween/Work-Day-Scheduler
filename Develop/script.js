@@ -48,18 +48,17 @@ function init() {
 
 // // save button will store appt in local storage
 // add event listener
-var textArea = document.querySelector("#description");
-var saveButton = document.querySelector("#saveBtn");
+var textArea = document.querySelector(".description");
+var saveButton = document.querySelector(".saveBtn");
 
-var addDescription = localStorage.getItem("add");
+var addDescription = localStorage.getItem("save");
 
 textArea.textContent = addDescription;
 
 saveButton.addEventListener("click", function () {
-  if (addDescription !== null) {
-    textArea.textContent = count;
-    localStorage.setItem("save", description);
-  }
+  var schedule = textArea.textContent;
+  console.log(textArea.textContent);
+  localStorage.setItem("save", schedule);
 });
 // ******************
 // $("saveBtn").on("click", function () {
