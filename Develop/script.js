@@ -48,19 +48,23 @@ function init() {
 
 // // save button will store appt in local storage
 // add event listener
-var textArea = document.querySelector(".description");
-var saveButton = document.querySelector(".saveBtn");
+// var textArea = document.getElementById("9-text");
+var saveButton = document.querySelector("#btn-9");
 
 var addDescription = localStorage.getItem("save");
+// to display
+$("#9-text").val(addDescription);
 
-textArea.textContent = addDescription;
+// textArea.textContent = addDescription;
 
 saveButton.addEventListener("click", function () {
-  var schedule = textArea.textContent;
-  console.log(textArea.textContent);
+  var schedule = $("#9-text").val();
+  console.log(schedule);
   localStorage.setItem("save", schedule);
 });
 // ******************
+// put all the tezt area into an array, call that something nad it loop
+
 // $("saveBtn").on("click", function () {
 //   var buttonValue = $(".description").val();
 //   var schedule = $(`#saveBtn-${buttonValue}`).val();
