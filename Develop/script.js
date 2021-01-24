@@ -9,19 +9,10 @@ var schedule = ["", "", "", "", "", "", "", "", ""];
 // // time blocks for that day
 var timeWindow = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 // /// THEN each time block is color-coded to indicate whether it is in the past, present, or future
-// var timeFuture = "future";
-// var textAreaEl = document.querySelector("#textarea");
 // // FUNCTIONS-----------------
 
 console.log(moment().format("h"));
 // if time the current time = now, then set to present, else, future, all else past
-// FOR LOOP
-// Do we add an eventlistener("click", function(){
-//   if (Number(moment().format("h")) === timeWindow[0]) {
-//     timeFuture === ".present";) {
-//       else Number(moment().format("h")) === timeWindow[1] = ".future"
-//     }
-// }to the time? If time is 9am
 
 $(".description").each(function () {
   // declare moment
@@ -43,37 +34,21 @@ $(".description").each(function () {
   }
 });
 
-// function displayTimeBlocks() {
-//   for (var i = 0; i < 9; i++) {
-//     if (Number(moment().format("h")) === timeWindow[0]) {
-//       timeFuture === "present";
-//     } else if (Number(moment().format("h")) > timeWindow[0]) {
-//       timeFuture = "past";
-//     } else {
-//       timeFuture ="future";
-//     }
-//    }
-//    var timeBlock= document.getElementById(timeBlock);
-
-//  Timewindow when time is now/present, then style is ".present" and when it's furture it's ".future" and past it's ".past"
-
-//   // THEN the text for that event is saved in local storage
-//   if (localStorage.getItem("textAreaValue"))
-//     descriptions = JSON.parse(localStorage.getItem("textAreaValue"));
-// // THEN the saved events persist
-// setInterval(function () {
-//   $("currentDay")
-// // }
-// for (var i = 0; i < 9; i++) {
-//   var divTag = $('<div class= "row time-block">');
-//   divTag.html(`<class="hour col-md-1">${timeWindow[i]}:00</div>
-//     <textarea class="description col-md-10 ${timeFuture}" id="saveBtn-${i}"></textarea>
-//     <button class="col-md-1 btn saveBtn" value="${i}">Save</button>`);
-//   timeBlock.append(divTag);
-// }
+// TODO: What is the purpose of the following function?
+function init() {
+  // TODO: What is the purpose of the following line of code?
+  var saveDescription = JSON.parse(localStorage.getItem("description"));
+  // TODO: Describe the functionality of the following `if` statement.
+  if (saveDescription !== null) {
+    description = saveDescription;
+  }
+  // TODO: Describe the purpose of the following line of code.
+  renderDescription();
+}
 
 // // save button will store appt in local storage
 // add event listener
+// ******************
 $("saveBtn").on("click", function () {
   var buttonValue = $(".description").val();
   var schedule = $(`#saveBtn-${buttonValue}`).val();
@@ -82,11 +57,21 @@ $("saveBtn").on("click", function () {
   localStorage.setItem("Save", schedule);
   // save textarea.val to the save button
 });
+
+// ************************
 // localStorage.setItem("Save", JSON.stringify(timeBlock));
 // var getEvent = JSON.parse(localStorage);
 // for (var i = 0; i < 9; i++) {
 //   var divTag = $("class= "row time-block"")
 // }
+
+//   // THEN the text for that event is saved in local storage
+//   if (localStorage.getItem("textAreaValue"))
+//     descriptions = JSON.parse(localStorage.getItem("textAreaValue"));
+// // THEN the saved events persist
+// setInterval(function () {
+//   $("currentDay")
+// // }
 
 // // USER INTERACTIONS--------------
 // // WHEN I click into a time block
