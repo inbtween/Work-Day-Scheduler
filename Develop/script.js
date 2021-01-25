@@ -1,12 +1,7 @@
-// console.log("hey this is working");
-// // $(document).ready(function () {}
 // // STARTING DATA------------------
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
-// // time blocks for standard business hours, 9AM - 5PM
-// //  a daily planner to create a schedule
-var schedule = ["", "", "", "", "", "", "", "", ""];
-// // time blocks for that day
+// // time blocks for standard business hours, 9AM - 5PM in  a daily planner to create a schedule
 var timeWindow = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 // /// THEN each time block is color-coded to indicate whether it is in the past, present, or future
 // // FUNCTIONS-----------------
@@ -34,64 +29,41 @@ $(".description").each(function () {
   }
 });
 
-// TODO: What is the purpose of the following function?
-function init() {
-  // TODO: What is the purpose of the following line of code?
-  var saveDescription = JSON.parse(localStorage.getItem("description"));
-  // TODO: Describe the functionality of the following `if` statement.
-  if (saveDescription !== null) {
-    description = saveDescription;
+// // Store in local storage
+
+var scheduleStorage = "schedule";
+function loadSchedule() {
+  schedule = JSON.parse(localStorage.getItem(scheduleStorage));
+  console.log("This is my scheduel: " + schedule);
+  if (schedule != null) {
+    schedule.forEach((schedule, index) => {
+      var text = schedule.reminders;
+      $(`#${index}`).val(text);
+      console.log(index);
+    });
   }
-  // TODO: Describe the purpose of the following line of code.
-  renderDescription();
 }
+var saveSchedules = (ev) => {
+  var schedule = [
+    { reminders: $("#0").val() },
+    { reminders: $("#1").val() },
+    { reminders: $("#2").val() },
+    { reminders: $("#3").val() },
+    { reminders: $("#4").val() },
+    { reminders: $("#5").val() },
+    { reminders: $("#6").val() },
+    { reminders: $("#7").val() },
+    { reminders: $("#8").val() },
+  ];
+  localStorage.setItem(scheduleStorage, JSON.stringify(schedule));
+};
 
-// // save button will store appt in local storage
-// add event listener
-// var textArea = document.getElementById("9-text");
-var saveButton = document.querySelector("#btn-9");
-
-var addDescription = localStorage.getItem("save");
-// to display
-$("#9-text").val(addDescription);
-
-// textArea.textContent = addDescription;
-
-saveButton.addEventListener("click", function () {
-  var schedule = $("#9-text").val();
-  console.log(schedule);
-  localStorage.setItem("save", schedule);
+// // // // add event listener
+// After I click the save button for that time block WHEN I refresh the page, the information is still there
+$(document).ready(() => {
+  var saveButton = [...document.getElementsByTagName("button")];
+  saveButton.forEach((saveButton) => {
+    saveButton.addEventListener("click", saveSchedules);
+  });
+  loadSchedule();
 });
-// ******************
-// put all the tezt area into an array, call that something nad it loop
-
-// $("saveBtn").on("click", function () {
-//   var buttonValue = $(".description").val();
-//   var schedule = $(`#saveBtn-${buttonValue}`).val();
-//   schedule.push(textCurrent);
-//   //  save to local storage
-//   localStorage.setItem("Save", schedule);
-//   // save textarea.val to the save button
-// });
-
-// ************************
-// localStorage.setItem("Save", JSON.stringify(timeBlock));
-// var getEvent = JSON.parse(localStorage);
-// for (var i = 0; i < 9; i++) {
-//   var divTag = $("class= "row time-block"")
-// }
-
-//   // THEN the text for that event is saved in local storage
-//   if (localStorage.getItem("textAreaValue"))
-//     descriptions = JSON.parse(localStorage.getItem("textAreaValue"));
-// // THEN the saved events persist
-// setInterval(function () {
-//   $("currentDay")
-// // }
-
-// // USER INTERACTIONS--------------
-// // WHEN I click into a time block
-// // THEN I can enter an event
-// // WHEN I click the save button for that time block
-
-// // WHEN I refresh the page
